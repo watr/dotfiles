@@ -5,11 +5,17 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/homebrew/bin:$PATH"
 
 # anyenv:
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
+if command -v anyenv &> /dev/null
+then
+    export PATH="$HOME/.anyenv/bin:$PATH"
+    eval "$(anyenv init -)"    
+fi
 
 # jenv:
-eval "$(jenv init -)"
+if command -v jenv &> /dev/null
+then
+    eval "$(jenv init -)"
+fi
 
 # zsh: pushd history duplication restriction
 setopt pushd_ignore_dups
