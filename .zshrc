@@ -17,6 +17,12 @@ then
     eval "$(jenv init -)"
 fi
 
+# direnv:
+if command -v direnv &> /dev/null
+then
+    eval "$(direnv hook zsh)"
+fi
+
 # zsh: pushd history duplication restriction
 setopt pushd_ignore_dups
 # zsh: command history duplication restriction
