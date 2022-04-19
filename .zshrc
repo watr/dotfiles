@@ -31,3 +31,6 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 # zsh: share history between terminals
 setopt share_history
+
+export EDITOR='nano'
+export VISUAL='nano'
