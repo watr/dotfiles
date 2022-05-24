@@ -34,6 +34,8 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 # zsh: share history between terminals
 setopt share_history
+# zsh:   perform history expansion and reload the line into the editing buffer
+setopt hist_verify
 
 export EDITOR='nano'
 export VISUAL='nano'
