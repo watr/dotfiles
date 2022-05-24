@@ -11,3 +11,8 @@ if [ ! -d "${git_dir}" ]; then
     mkdir -p "${git_dir}"
 fi
 command ln -snf "${dot_dir}/.gitignore_global" "${git_dir}/ignore"
+
+default_branch="$(git config --list --global | sed -nr 's/(^init.defaultBranch=)(.*)$/\2/pi' )"
+if [ -z "${default_branch}" ]; then
+git config --global init.defaultBranch main
+fi
