@@ -39,3 +39,10 @@ setopt hist_verify
 
 export EDITOR='nano'
 export VISUAL='nano'
+
+# Create history log per working directory in bash - Unix & Linux Stack Exchange
+# https://unix.stackexchange.com/questions/305524/create-history-log-per-working-directory-in-bash
+function ch () {
+    cd "$@"
+    export HISTFILE="$(pwd)/.zsh_history"
+}
