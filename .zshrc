@@ -7,6 +7,12 @@ export PATH="$HOME/homebrew/bin:$PATH"
 # dart pub:
  export PATH="$PATH":"$HOME/.pub-cache/bin"
 
+# starship
+if command -v starship &> /dev/null
+then
+    eval "$(starship init zsh)"
+fi
+
 # anyenv:
 if command -v anyenv &> /dev/null
 then
