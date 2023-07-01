@@ -52,3 +52,9 @@ function ch () {
     cd "$@"
     export HISTFILE="$(pwd)/.zsh_history"
 }
+
+# asdf:
+if command -v asdf &> /dev/null
+then
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+fi
