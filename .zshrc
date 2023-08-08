@@ -13,25 +13,6 @@ then
     eval "$(starship init zsh)"
 fi
 
-# anyenv:
-if command -v anyenv &> /dev/null
-then
-    export PATH="$HOME/.anyenv/bin:$PATH"
-    eval "$(anyenv init -)"    
-fi
-
-# jenv:
-if command -v jenv &> /dev/null
-then
-    eval "$(jenv init -)"
-fi
-
-# direnv:
-if command -v direnv &> /dev/null
-then
-    eval "$(direnv hook zsh)"
-fi
-
 # zsh: pushd history duplication restriction
 setopt pushd_ignore_dups
 # zsh: command history duplication restriction
