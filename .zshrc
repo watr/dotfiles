@@ -7,6 +7,9 @@ export PATH="$HOME/homebrew/bin:$PATH"
 # dart pub:
  export PATH="$PATH":"$HOME/.pub-cache/bin"
 
+# shell scripts
+export PATH="$PATH":"$HOME/.bin"
+
 # starship
 if command -v starship &> /dev/null
 then
@@ -37,5 +40,5 @@ function ch () {
 # asdf:
 if command -v asdf &> /dev/null
 then
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. "$(brew --prefix asdf)/libexec/asdf.sh"
 fi
