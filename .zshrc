@@ -1,5 +1,10 @@
+####
 # homebrew: global installed homebrew
-export PATH="/opt/homebrew/bin:$PATH"
+####
+# arm 
+export PATH="/opt/homebrew/bin":"$PATH"
+# intel
+export PATH="/usr/local/bin":"$PATH"
 
 # dart pub:
  export PATH="$PATH":"$HOME/.pub-cache/bin"
