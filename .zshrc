@@ -1,9 +1,6 @@
 # homebrew: global installed homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 
-# homebrew: user local installed homebrew
-export PATH="$HOME/homebrew/bin:$PATH"
-
 # dart pub:
  export PATH="$PATH":"$HOME/.pub-cache/bin"
 
