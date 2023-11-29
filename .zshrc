@@ -46,3 +46,18 @@ if command -v asdf &> /dev/null
 then
 . "$(brew --prefix asdf)/libexec/asdf.sh"
 fi
+
+################
+# functions
+################
+
+# smbで公開されている名前からIPを取得する
+function smbname2ip(){
+    if [ ${#} -ne 1 ]; then
+        echo "usage:\n% smbname2ip machine_name"
+        return 1
+    fi
+
+    MACHINE_NAME=$1
+    smbutil lookup "${MACHINE_NAME}" | tail -1 | tr -d ' ' | rev | cut -d":" -f1 | rev
+}
