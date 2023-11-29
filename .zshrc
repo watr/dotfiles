@@ -12,6 +12,8 @@ export PATH="/usr/local/bin":"$PATH"
 # shell scripts
 export PATH="$PATH":"$HOME/.bin"
 
+# you have PATH problem? "command not found" ? using asdf? > % asdf reshim
+
 # starship
 if command -v starship &> /dev/null
 then
